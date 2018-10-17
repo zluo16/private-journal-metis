@@ -5,7 +5,9 @@
   <% @journals.each do |journal| %>
     <tr>
       <td><%= journal.title %></td>
+      <td><%= link_to 'view', journal_path(journal) %></td>
     </tr>
   <% end %>
 </table>
 <%= button_to 'Create New Journal', new_journal_path, method: 'get' %>
+<%= button_to 'Logout', logout_path, method: 'post' %>
