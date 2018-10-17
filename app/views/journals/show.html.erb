@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th><%= @journal.title %></th>
+  </tr>
+  <% @journal.entries.each do |entry| %>
+    <tr>
+      <td><%= entry.title %></td>
+      <td><%= link_to 'view', journal_entry_path(entry) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= button_to 'Create New Journal', new_journal_path, method: 'get' %>
+<%= button_to 'Add New Entry', new_journal_entry_path(@journal), method: 'get' %>

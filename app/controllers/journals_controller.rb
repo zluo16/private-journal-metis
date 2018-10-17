@@ -2,7 +2,7 @@ class JournalsController < ApplicationController
   before_action :authenticated
 
   def index
-    @journals = Journals.where(user_id: session[:user_id])
+    @journals = Journal.where(user_id: session[:user_id])
   end
 
   def new
