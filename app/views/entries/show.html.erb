@@ -1,3 +1,4 @@
 <h1><%= @entry.title %></h1>
 <p><%= @entry.text %></p>
 <%= button_to 'Back to Journal', journal_path(@journal), method: 'get' %>
+<%= button_to 'Delete Entry', journal_entry_path(journal_id: @journal.id, id: @entry.id), method: 'post' %>
