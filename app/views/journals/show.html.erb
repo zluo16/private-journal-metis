@@ -5,7 +5,7 @@
   <% @journal.entries.each do |entry| %>
     <tr>
       <td><%= entry.title %></td>
-      <td><%= link_to 'view', journal_entry_path(entry) %></td>
+      <td><%= link_to 'view', journal_entry_path(journal_id: @journal.id, id: entry.id) %></td>
     </tr>
   <% end %>
 </table>

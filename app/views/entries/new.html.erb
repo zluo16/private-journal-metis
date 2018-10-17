@@ -1,0 +1,7 @@
+<%= form_tag journal_entries_path do %>
+  <%= label_tag :title, 'Entry Title' %>
+  <%= text_field_tag 'entry[title]', nil, placeholder: 'Title' %>
+  <%= label_tag :text, 'Entry Body' %><br><br>
+  <%= text_area_tag 'entry[text]', nil, placeholder: 'Write entry here...', size: '100x100' %>
+  <%= submit_tag %>
+<% end %>

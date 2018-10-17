@@ -12,7 +12,7 @@ class EntriesController < ApplicationController
     @entry.journal_id = journal.id
     if @entry.valid?
       @entry.save
-      redirect_to journal_entry_path(@entry.id)
+      redirect_to journal_entry_path(journal_id: journal.id, id: @entry.id)
     else
       render :new
     end
